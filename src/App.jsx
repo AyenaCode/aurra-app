@@ -1,11 +1,9 @@
-import { Card } from "./components/Card";
-import { Superbtn } from "./components/Superbtn";
+import Accueil from "./pages/Accueil";
 
 function App() {
   return (
     <>
-      <Card>coucou</Card>
-      <Superbtn>Mon super bouton</Superbtn>
+      <Accueil />
     </>
   );
 }

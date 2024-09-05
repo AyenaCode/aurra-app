@@ -1,3 +1,4 @@
+import { Menu, X } from "lucide-react"; // Import des icônes Lucide
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -30,18 +31,37 @@ export const Navbar = () => {
   };
 
   return (
-    <nav onClick={handleMenuClick}>
-      <div className="title">
-        <Link to="/"> AURRA COM</Link>
+    <nav
+      onClick={handleMenuClick}
+      className={`bg-blue-950 shadow-md p-4 flex justify-around items-center ${
+        isOpen ? "bg-transparent" : ""
+      }`}
+    >
+      <div
+        className={`title text-xl font-bold ${
+          isOpen ? "absolute top-10 left-5" : ""
+        }`}
+      >
+        <Link to="/">AURRA COM</Link>
       </div>
-      <button className="burger-menu" onClick={() => toggleMenu()}>
-        <i className={isOpen ? "fa fa-times" : "fa fa-bars"}></i>
+      <button className="burger-menu md:hidden" onClick={toggleMenu}>
+        {isOpen ? (
+          <X className="absolute top-4 right-30 mx-10 w-8 h-8 bg-blue-950 group-focus:border-none border-none" />
+        ) : (
+          <Menu className="w-8 h-8 bg-blue-950" />
+        )}
+        {/* Icônes Lucide */}
       </button>
-      <ul className={isOpen ? "nav-links open" : "nav-links"}>
+      <ul
+        className={`nav-links md:flex space-x-6 font-semibold items-center transition-transform duration-300 ease-in-out ${
+          isOpen
+            ? "block  bg-gradient-to-r from-violet-700 to-pink-600 w-78 rounded-md text-center absolute top-4 right-0 z-10 p-12"
+            : "hidden"
+        } md:block`}
+      >
         <NavLink to="/">
           <li>Accueil</li>
         </NavLink>
-
         <HashLink to="/#services" smooth>
           <li>Services</li>
         </HashLink>

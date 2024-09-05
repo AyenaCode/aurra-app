@@ -1,7 +1,7 @@
 import { AboutSection } from "../components/AboutSection";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-// import { Navbar } from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 import { ProjectSection } from "../components/ProjectSection";
 import ScrollToTop from "../components/ScrollTop";
 import { ServiceSection } from "../components/ServiceSection";
@@ -9,7 +9,7 @@ import { ServiceSection } from "../components/ServiceSection";
 const Accueil = () => {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <Header />
       <AboutSection />
       <ServiceSection />

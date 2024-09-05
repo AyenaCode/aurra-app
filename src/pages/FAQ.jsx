@@ -1,10 +1,10 @@
 import { Navbar } from "../components/Navbar";
 
-const FAQ = () => {
+const Faq = () => {
   return (
     <>
       <Navbar />
-      <section id="faq">
+      <section id="faq" className="m-5">
         <h2>Questions fréquentes</h2>
         <h3>Quels services proposez-vous ?</h3>
         <p>
@@ -17,4 +17,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

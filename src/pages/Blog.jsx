@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <>
       <Navbar />
-      <section id="blog">
+      <section id="blog" className="m-5">
         <h2>Blog</h2>
         <div>
           <div>

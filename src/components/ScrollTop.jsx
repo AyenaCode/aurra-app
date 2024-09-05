@@ -1,3 +1,4 @@
+import { CornerRightUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const ScrollToTop = () => {
@@ -34,7 +35,8 @@ const ScrollToTop = () => {
           style={{
             position: "fixed",
             bottom: "2rem",
-            right: "2rem",
+            right: "1rem",
+            paddingLeft: "0.7rem",
             border: "none",
             borderRadius: "50%",
             cursor: "pointer",
@@ -42,7 +44,7 @@ const ScrollToTop = () => {
             height: "50px",
           }}
         >
-          ↑
+          <CornerRightUp />
         </button>
       )}
     </div>

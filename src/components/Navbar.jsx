@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react"; // Import des icônes Lucide
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
   // État pour gérer l'ouverture du menu
@@ -47,11 +48,13 @@ export const Navbar = () => {
       onClick={handleMenuClick}
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? "bg-base-300 shadow-md" : "bg-transparent"
-      } ${isOpen ? "bg-base-300" : ""} ${isOpen ? "absolute" : ""} `}
+      } ${isOpen ? "absolute" : ""} `}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="title text-xl font-bold text-white">
-          <Link to="/">AURRA COM</Link>
+          <Link onClick={() => closeMenu()} to="/">
+            AURRA COM
+          </Link>
         </div>
         <button
           className="md:hidden bg-transparent text-white"
@@ -61,6 +64,7 @@ export const Navbar = () => {
           {isOpen ? <X className="w-8 h-8 " /> : <Menu className="w-8 h-8" />}
         </button>
         <ul
+          onClick={() => closeMenu()}
           className={`nav-links md:flex space-x-6 font-semibold items-center transition-all duration-300 ${
             isOpen
               ? "absolute rounded-lg w-30 m-2 top-full right-0 text-center bg-gradient-to-r from-violet-500 to-pink-500 hover:from-pink-400 hover:to-violet-500 p-4 space-y-4 md:space-y-0"
@@ -73,6 +77,9 @@ export const Navbar = () => {
           <NavLink to="/services" className="text-white ">
             <li>Services</li>
           </NavLink>
+          <HashLink to="/#projects" smooth className="text-white ">
+            <li>Nos Projets</li>
+          </HashLink>
           <NavLink to="/a-propos" className="text-white ">
             <li>À propos</li>
           </NavLink>
@@ -82,6 +89,9 @@ export const Navbar = () => {
           <NavLink to="/contact" className="text-white">
             <li>Contact</li>
           </NavLink>
+          <HashLink to="/#faq" smooth className="text-white ">
+            <li>FAQ</li>
+          </HashLink>
           <Link to="/contact" className="md:ml-4">
             <button
               className="bg-primary hover:bg-primary-focus text-base-100 font-bold py-2 px-4 rounded transition duration-300"

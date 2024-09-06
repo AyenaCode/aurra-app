@@ -47,8 +47,8 @@ export const Navbar = () => {
     <nav
       onClick={handleMenuClick}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-base-300 shadow-md" : "bg-transparent"
-      } ${isOpen ? "absolute" : ""} `}
+        scrolled ? "bg-base-300 shadow-md z-50" : "bg-transparent"
+      } `}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="title text-xl font-bold text-white">

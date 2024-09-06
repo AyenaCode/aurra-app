@@ -5,7 +5,7 @@ import { Superbtn } from "../components/Superbtn";
 const APropos = () => {
   return (
     <div className="bg-indigo-950">
-      <main>
+      <main className="p-5">
         <section className="hero  text-white py-20">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-bold mb-4">À Propos de Nous</h1>

@@ -8,14 +8,14 @@ const Contact = () => {
         <section className="hero text-white py-20 pb-2">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-bold mb-4">Contactez-nous</h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 p-2">
               Nous sommes là pour répondre à toutes vos questions et vous aider
               à atteindre vos objectifs
             </p>
           </div>
         </section>
 
-        <section className="contact-form py-2">
+        <section className="contact-form p-2">
           <div className="container mx-auto">
             <div className="max-w-2xl mx-auto">
               <form className="bg-gradient-to-r from-violet-500 to-pink-500 hover:from-pink-400 hover:to-violet-500 text-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

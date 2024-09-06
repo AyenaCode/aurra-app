@@ -1,4 +1,3 @@
-import { Navbar } from "../components/Navbar";
 import { ArticleCard } from "./articles/ArticleCard";
 
 const Blog = () => {
@@ -7,21 +6,85 @@ const Blog = () => {
       title: "5 tendances en marketing digital à surveiller en 2024",
       excerpt:
         "Découvrez les dernières tendances qui vont transformer le paysage du marketing digital cette année...",
-      image: "/images/blog1.jpg", // Chemin de l'image
+      image: "/img2.jpg", // Chemin de l'image
+      date: "5 janvier 2024",
+    },
+    {
+      title: "5 tendances en marketing digital à surveiller en 2024",
+      excerpt:
+        "Découvrez les dernières tendances qui vont transformer le paysage du marketing digital cette année...",
+      image: "/img2.jpg", // Chemin de l'image
       date: "5 janvier 2024",
     },
     {
       title: "Comment optimiser votre stratégie de contenu",
       excerpt:
         "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
-      image: "/images/blog2.jpg", // Chemin de l'image
+      image: "/img3.jpg", // Chemin de l'image
       date: "10 février 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/social2.webp", // Chemin de l'image
+      date: "15 janvier 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/img11.jpg", // Chemin de l'image
+      date: "24 Avril 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/social2.webp", // Chemin de l'image
+      date: "15 janvier 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/img11.jpg", // Chemin de l'image
+      date: "24 Avril 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/lire.webp", // Chemin de l'image
+      date: "10 mars 2024",
+    },
+    {
+      title: "Comment optimiser votre stratégie de contenu",
+      excerpt:
+        "Apprenez à améliorer la performance de vos contenus et à attirer plus de trafic vers votre site...",
+      image: "/lire.webp", // Chemin de l'image
+      date: "10 mars 2024",
     },
     {
       title: "L’importance de l’email marketing en 2024",
       excerpt:
         "Même avec l’essor des réseaux sociaux, l’email marketing reste l’un des canaux les plus efficaces...",
       date: "20 mars 2024",
+      image: "/social.webp",
+    },
+    {
+      title: "L’importance de l’email marketing en 2024",
+      excerpt:
+        "Même avec l’essor des réseaux sociaux, l’email marketing reste l’un des canaux les plus efficaces...",
+      date: "20 mars 2024",
+      image: "/social.webp",
+    },
+    {
+      title: "L’importance de l’email marketing en 2024",
+      excerpt:
+        "Même avec l’essor des réseaux sociaux, l’email marketing reste l’un des canaux les plus efficaces...",
+      date: "20 mars 2024",
+      image: "/social.webp",
     },
   ];
 
@@ -32,7 +95,6 @@ const Blog = () => {
 
   return (
     <>
-      <Navbar />
       <section id="blog" className="p-8 md:p-20">
         <h2 className="text-center text-3xl font-bold mb-8">Blog</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

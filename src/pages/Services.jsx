@@ -7,7 +7,7 @@ import { Superbtn } from "../components/Superbtn";
 const Services = () => {
   return (
     <>
-      <main>
+      <main className="p-2">
         <section className="hero bg-indigo-950 text-white py-20">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-bold mb-4">Nos Services</h1>

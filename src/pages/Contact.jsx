@@ -27,7 +27,7 @@ const Contact = () => {
                     Nom
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-700 focus:text-white focus:shadow-outline"
+                    className="shadow appearance-none border rounded bg-violet-950 w-full py-2 px-3 leading-tight focus:outline-none focus:bg-gray-700 focus:text-white focus:shadow-outline"
                     id="name"
                     type="text"
                     placeholder="Votre nom"
@@ -41,7 +41,7 @@ const Contact = () => {
                     Email
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-700 focus:text-white focus:shadow-outline"
+                    className="shadow appearance-none bg-violet-950 border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:bg-gray-700 focus:text-white focus:shadow-outline"
                     id="email"
                     type="email"
                     placeholder="Votre email"
@@ -55,7 +55,7 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:text-white focus:bg-gray-700 focus:shadow-outline"
+                    className="shadow appearance-none bg-violet-950 border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:text-white focus:bg-gray-700 focus:shadow-outline"
                     id="message"
                     placeholder="Votre message"
                     rows="6"

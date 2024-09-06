@@ -77,7 +77,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p>contact@aurra.com</p>
+                <p>aurracommunication@gmail.com</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Téléphone</h3>

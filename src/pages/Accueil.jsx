@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { ProjectSection } from "../components/ProjectSection";
 import { ServiceSection } from "../components/ServiceSection";
 import { Superbtn } from "../components/Superbtn";
+import { TestimonialSection } from "../components/TestimonialSection";
 
 const Accueil = () => {
   return (
@@ -44,42 +45,7 @@ const Accueil = () => {
             </Link>
           </div>
         </section>
-        <section className="testimonials bg-base-200 py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16 text-base-content">
-              Ce que disent nos clients
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <div className="bg-base-300 p-8 rounded-lg shadow-lg">
-                <p className="mb-6 text-base-content/70 italic">
-                  "Grâce à leur expertise en SEO, notre trafic organique a
-                  augmenté de 200% en seulement 6 mois !"
-                </p>
-                <p className="font-bold text-base-content">
-                  - Marie D., PDG de TechSolutions
-                </p>
-              </div>
-              <div className="bg-base-300 p-8 rounded-lg shadow-lg">
-                <p className="mb-6 text-base-content/70 italic">
-                  "Leur équipe a transformé notre présence sur les réseaux
-                  sociaux. Nos ventes en ligne ont explosé !"
-                </p>
-                <p className="font-bold text-base-content">
-                  - Thomas L., Directeur Marketing chez FashionBrand
-                </p>
-              </div>
-              <div className="bg-base-300 p-8 rounded-lg shadow-lg">
-                <p className="mb-6 text-base-content/70 italic">
-                  "Un partenaire de confiance qui comprend vraiment nos besoins
-                  et livre des résultats exceptionnels."
-                </p>
-                <p className="font-bold text-base-content">
-                  - Sophie M., Fondatrice de GreenStartup
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <TestimonialSection />
         <section className="cta bg-gradient-to-r from-secondary to-primary text-base-100 py-24">
           <div className="container mx-auto text-center px-4">
             <h2 className="text-4xl font-bold mb-8">

@@ -1,13 +1,24 @@
 import PropTypes from "prop-types";
 
-export const Card = ({ children }) => {
+export const Card = ({ title, description, image = null }) => {
   return (
-    <div className="card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-2xl w-96 h-96 items-center justify-center ">
-      {children}
+    <div className="bg-blue-950 shadow-lg rounded-lg p-6 mb-6 transition-transform hover:scale-105">
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-48 object-cover rounded-t-lg mb-4"
+        />
+      )}
+      <h4 className="text-xl font-bold mb-2">{title}</h4>
+      <p className="text-justify">{description}</p>
     </div>
   );
 };
 
+// Définitions des PropTypes
 Card.propTypes = {
-  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired, // Le titre est requis et doit être une chaîne
+  description: PropTypes.string.isRequired, // La description est requise et doit être une chaîne
+  image: PropTypes.string, // L'image est optionnelle et doit être une chaîne (URL)
 };

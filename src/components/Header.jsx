@@ -11,19 +11,19 @@ export const Header = () => {
     ];
 
     return (
-      <section className="flex items-center justify-center h-50 py-8 lg:text-3xl sm:text-lg md:text-2xl">
+      <section className="flex card shadow-2xl w-full items-center justify-center h-50 py-8 lg:text-3xl sm:text-lg md:text-2xl bg-gradient-to-r from-violet-500 to-pink-500 absolute bottom-0">
         <Typewriter texts={texts} />
       </section>
     );
   };
 
   return (
-    <div className="flex items-center justify-center min-h-full p-4 md:px-8 bg-indigo-950 rounded-md">
-      <header className="text-center space-y-6">
+    <div className="flex items-center justify-center p-10 pb-0 md:px-8 bg-indigo-950 rounded-md">
+      <header className="text-center space-y-6 h-[85vh] relative">
         <h1 className=" text-3xl drop-shadow-xl lg:text-8xl sm:text-4xl md:text-6xl font-bold my-5">
           Bienvenue chez AURRA Communication 🙋‍♂️
         </h1>
-        <p className="text-base lg:text-3xl sm:text-lg md:text-2xl">
+        <p className="text-green-300 drop-shadow-2xl lg:text-3xl sm:text-lg md:text-2xl">
           Transformez votre vision en réalité grâce à nos solutions de
           communication sur mesure
         </p>

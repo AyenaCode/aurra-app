@@ -2,7 +2,9 @@
 export const AboutSection = () => {
   return (
     <section id="about" className="px-4 m-5 md:px-8">
-      <h2 className="text-center text-2xl font-bold mb-4">Qui sommes-nous ?</h2>
+      <h2 className="text-center text-2xl font-bold mb-4 text-pink-500">
+        Qui sommes-nous ?
+      </h2>
       <p className="text-justify indent-8 mb-4">
         Aurra Communication est une agence innovante spécialisée dans la
         communication, l'organisation événementielle et les services d'emploi.

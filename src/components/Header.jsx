@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-center min-h-full p-4 md:px-8 bg-indigo-950 rounded-md">
       <header className="text-center space-y-6">
-        <h1 className=" text-3xl drop-shadow-xl lg:text-8xl sm:text-4xl md:text-6xl font-bold">
+        <h1 className=" text-3xl drop-shadow-xl lg:text-8xl sm:text-4xl md:text-6xl font-bold my-5">
           Bienvenue chez AURRA Communication 🙋‍♂️
         </h1>
         <p className="text-base lg:text-3xl sm:text-lg md:text-2xl">

@@ -1,8 +1,9 @@
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
+import React from "react";
 
-export const Superbtn = ({ children }) => {
+export const Superbtn = ({ children, onClick }) => {
   return (
-    <button className="btn bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-violet-500">
+    <button className="btn btn-primary" onClick={onClick}>
       {children}
     </button>
   );
@@ -10,4 +11,5 @@ export const Superbtn = ({ children }) => {
 
 Superbtn.propTypes = {
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 };

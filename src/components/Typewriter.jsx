@@ -1,45 +1,28 @@
-import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const Typewriter = ({ texts }) => {
-  const [currentText, setCurrentText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150); // Vitesse de frappe
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [reverse, setReverse] = useState(false);
 
   useEffect(() => {
-    const handleTyping = () => {
-      const fullText = texts[loopNum % texts.length]; // Récupère le texte à afficher
-      setCurrentText(
-        isDeleting
-          ? fullText.substring(0, currentText.length - 1)
-          : fullText.substring(0, currentText.length + 1)
-      );
+    if (subIndex === texts[index].length + 1 && !reverse) {
+      setReverse(true);
+      return;
+    }
 
-      if (!isDeleting && currentText === fullText) {
-        setTimeout(() => setIsDeleting(true), 2000); // Pause avant d'effacer
-        setTypingSpeed(50); // Réduit la vitesse d'effacement
-      } else if (isDeleting && currentText === "") {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-        setTypingSpeed(150); // Réinitialise la vitesse de frappe
-      }
-    };
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => (prev + 1) % texts.length);
+      return;
+    }
 
-    const typingTimer = setTimeout(handleTyping, typingSpeed);
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 75 : subIndex === texts[index].length ? 1000 : 150, parseInt(Math.random() * 350)));
 
-    return () => clearTimeout(typingTimer);
-  }, [currentText, isDeleting, loopNum, typingSpeed, texts]);
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse, texts]);
 
-  return (
-    <div className="text-l font-bold text-center md:text-2xl">
-      <span>{currentText}</span>
-      <span className="blinking-cursor">|</span>
-    </div>
-  );
-};
-
-// Typage des props avec PropTypes
-Typewriter.propTypes = {
-  texts: PropTypes.arrayOf(PropTypes.string).isRequired, // Vérifie que `texts` est un tableau de chaînes
+  return <span>{texts[index].substring(0, subIndex)}</span>;
 };

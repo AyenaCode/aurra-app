@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-500 shadow-xl"
+          className="bg-gradient-to-r z-50 from-pink-500 to-violet-500 hover:from-pink-400 hover:to-violet-500 shadow-xl"
           style={{
             position: "fixed",
             bottom: "2rem",

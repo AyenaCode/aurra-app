@@ -1,10 +1,11 @@
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer className="bg-indigo-950 py-6">
+    <footer className="bg-base-300 text-base-content p-4 mt-8">
       <div className="container mx-auto text-center">
-        <p className="mb-2">&copy; 2024 AURRA COM. Tous droits réservés.</p>
-        <p>made by AURRA DEV</p>
+        <p>&copy; 2024 AURRA Communication. Tous droits réservés.</p>
       </div>
     </footer>
   );
 };
+
+export default Footer;

@@ -60,4 +60,5 @@ button:focus-visible {
 nav button:focus,
 button:focus-visible {
   outline: none;
+  background-color: transparent;
 }

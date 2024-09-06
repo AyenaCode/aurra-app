@@ -1,6 +1,17 @@
 import { Navbar } from "../components/Navbar";
+import { Typewriter } from "../components/Typewriter";
 
 const Contact = () => {
+  const Animated = () => {
+    const texts = ["Nous serions ravis de discuter de vos projets."];
+
+    return (
+      <section className="flex items-center justify-center h-50 py-8 lg:text-3xl sm:text-lg md:text-2xl">
+        <Typewriter texts={texts} />
+      </section>
+    );
+  };
+
   return (
     <div className="block">
       <Navbar />
@@ -8,9 +19,8 @@ const Contact = () => {
         <h2 className="text-center text-3xl font-semibold mb-4">
           Contactez-nous
         </h2>
-        <p className="text-center mb-6">
-          Nous serions ravis de discuter de vos projets.
-        </p>
+
+        <Animated />
         <form className="form relative max-w-3xl lg:max-w-5xl mx-auto p-6 bg-gradient-to-r from-violet-500 to-blue-400 shadow-md rounded-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <input

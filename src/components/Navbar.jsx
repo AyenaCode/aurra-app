@@ -46,7 +46,7 @@ export const Navbar = () => {
       </div>
       <button className="burger-menu md:hidden" onClick={toggleMenu}>
         {isOpen ? (
-          <X className="absolute top-4 right-30 mx-10 w-8 h-8 bg-blue-950 group-focus:border-none border-none" />
+          <X className="absolute top-4 right-30 mx-10 w-8 h-8 bg-blue-950 group-focus:border-none border-none z-20" />
         ) : (
           <Menu className="w-8 h-8 bg-blue-950" />
         )}

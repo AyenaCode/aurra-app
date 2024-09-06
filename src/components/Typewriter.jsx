@@ -32,7 +32,7 @@ export const Typewriter = ({ texts }) => {
   }, [currentText, isDeleting, loopNum, typingSpeed, texts]);
 
   return (
-    <div className="text-2xl font-bold text-center">
+    <div className="text-l font-bold text-center md:text-2xl">
       <span>{currentText}</span>
       <span className="blinking-cursor">|</span>
     </div>

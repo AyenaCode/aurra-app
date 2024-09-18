@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import { Footer } from "../components/Footer";
 import { Superbtn } from "../components/Superbtn";
 
 const APropos = () => {
@@ -9,7 +9,8 @@ const APropos = () => {
         <section className="hero  text-white py-20">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl font-bold mb-4">À Propos de Nous</h1>
-            <p className="text-xl mb-8">
+
+            <p className="text-xl mb-8 text-centerr">
               Découvrez l&apos;équipe passionnée derrière vos succès en
               marketing digital
             </p>
@@ -22,7 +23,7 @@ const APropos = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Notre Histoire</h2>
                 <p className="mb-4">
-                  Fondée en 2010, notre agence est née de la passion pour le
+                  Fondée en 2018, notre agence est née de la passion pour le
                   marketing digital et de la volonté d&apos;aider les
                   entreprises à réussir en ligne. Depuis, nous avons accompagné
                   des centaines de clients vers le succès.

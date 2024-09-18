@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { AboutSection } from "../components/AboutSection";
 import { FaqSection } from "../components/FaqSection";
-import Footer from "../components/Footer";
+import { Footer } from "../components/Footer";
 import { ProjectSection } from "../components/ProjectSection";
 import { ServiceSection } from "../components/ServiceSection";
 import { Superbtn } from "../components/Superbtn";
@@ -26,6 +26,7 @@ const Accueil = () => {
             </Link>
           </div>
         </section>
+
         <AboutSection />
         <ProjectSection />
         <ServiceSection />

@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import { Superbtn } from "../components/Superbtn";
 
 const Contact = () => {
@@ -91,7 +90,6 @@ const Contact = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

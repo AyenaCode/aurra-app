@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
 import { Superbtn } from "../components/Superbtn";
 

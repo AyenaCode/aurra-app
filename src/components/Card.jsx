@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export const Card = ({ title, description, image = null }) => {
   return (
-    <div className="bg-blue-950 shadow-lg rounded-lg p-6 mb-6 transition-transform hover:scale-105">
+    <div className="bg-blue-950 shadow-lg text-gray-200 rounded-lg p-6 mb-6 transition-transform hover:scale-105">
       {image && (
         <img
           src={image}

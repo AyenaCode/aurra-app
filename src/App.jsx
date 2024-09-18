@@ -1,9 +1,8 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import {
-  default as AutoScroll,
-  default as ScrollToTop,
-} from "./components/AutoScroll";
+
+import AutoScroll from "./components/AutoScroll";
 import { Navbar } from "./components/Navbar";
+import { ScrollToTop } from "./components/ScrollTop";
 import Accueil from "./pages/Accueil";
 import APropos from "./pages/APropos";
 import Blog from "./pages/Blog";
@@ -13,8 +12,8 @@ import Services from "./pages/Services";
 function App() {
   return (
     <Router>
-      <ScrollToTop />
       <AutoScroll />
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Accueil />} />

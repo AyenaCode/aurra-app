@@ -31,19 +31,19 @@ const Accueil = () => {
 
   return (
     <div className="bg-base-100">
-      <main className="pt-16">
+      <main>
         <motion.section
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="hero bg-gradient-to-r from-primary to-secondary text-base-100 py-32"
+          className="hero bg-gradient-to-r from-violet-900 to-blue-800 text-base-100 py-32"
         >
           <div className="container mx-auto text-center px-4">
             <motion.h1
               variants={itemVariants}
               className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight"
             >
-              Agence de Communication Marketing
+              AURRA Communication et Marketing
             </motion.h1>
             <motion.p
               variants={itemVariants}

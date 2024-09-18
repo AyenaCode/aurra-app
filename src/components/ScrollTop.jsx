@@ -1,7 +1,7 @@
 import { CornerRightUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const ScrollToTop = () => {
+export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Fonction pour faire défiler vers le haut
@@ -50,5 +50,3 @@ const ScrollToTop = () => {
     </div>
   );
 };
-
-export default ScrollToTop;

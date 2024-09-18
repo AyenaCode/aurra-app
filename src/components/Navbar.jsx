@@ -52,7 +52,7 @@ export const Navbar = () => {
   };
 
   const navLinkClass =
-    "text-base-content hover:text-primary transition-colors duration-300";
+    "text-violet-500 hover:text-primary transition-colors duration-300";
   const activeNavLinkClass = "text-primary font-bold";
 
   return (
@@ -62,12 +62,12 @@ export const Navbar = () => {
         scrolled ? "bg-base-300 shadow-lg" : "bg-transparent"
       } `}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-base-content">
+      <div className="container mx-auto px-4 py-1 flex justify-between items-center">
+        <Link to="/" className="text-xl font-bold text-white">
           AURRA COM
         </Link>
         <button
-          className="md:hidden bg-transparent text-base-content"
+          className="md:hidden bg-transparent text-white"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >

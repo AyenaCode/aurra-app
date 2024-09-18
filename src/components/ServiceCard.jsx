@@ -1,16 +1,10 @@
 import PropTypes from "prop-types";
 
-export const ServiceCard = ({ title, description, image = null }) => {
+export const ServiceCard = ({ title, description, Icon = null }) => {
   return (
-    <div className="service text-center bg-gradient-to-r from-violet-500 to-pink-500 hover:from-pink-400 hover:to-violet-500 p-4 rounded-lg shadow-lg transition-transform hover:scale-105">
-      {image && (
-        <img
-          src={image}
-          alt={title}
-          className="mb-4 rounded-lg w-full h-40 object-cover"
-        />
-      )}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <div className="service bg-gradient-to-r from-violet-800 to-pink-800 hover:from-pink-800 hover:to-violet-800 p-4 m-2 rounded-lg shadow-lg transition-transform hover:scale-105">
+      {Icon && <Icon className="text-6xl" />}
+      <h3 className="text-center text-xl font-semibold mb-2">{title}</h3>
       <p className="text-center">{description}</p>
     </div>
   );
@@ -20,5 +14,5 @@ export const ServiceCard = ({ title, description, image = null }) => {
 ServiceCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string, // L'image est optionnelle
+  Icon: PropTypes.elementType, // L'icône est optionnelle
 };

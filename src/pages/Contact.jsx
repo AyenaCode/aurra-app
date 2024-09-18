@@ -17,7 +17,7 @@ const Contact = () => {
         <section className="contact-form p-2">
           <div className="container mx-auto">
             <div className="max-w-2xl mx-auto">
-              <form className="bg-gradient-to-r from-violet-500 to-pink-500 hover:from-pink-400 hover:to-violet-500 text-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <form className="bg-gradient-to-r from-violet-500 to-pink-500 hover:from-pink-400 hover:to-violet-500 text-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                   <label
                     className="block text-sm font-bold mb-2"
@@ -68,7 +68,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="contact-info bg-gradient-to-r from-violet-500 to-pink-500  py-10">
+        <section className="contact-info bg-gradient-to-r from-violet-500 to-violet-900  py-10">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">
               Autres façons de nous contacter

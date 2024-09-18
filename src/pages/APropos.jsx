@@ -1,23 +1,66 @@
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Superbtn } from "../components/Superbtn";
 
+const AnimatedSection = ({ children, className }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+AnimatedSection.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
 const APropos = () => {
   return (
-    <div className="bg-indigo-950">
+    <div className="bg-base-100">
       <main className="p-5">
-        <section className="hero  text-white py-20">
+        <motion.section
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="hero bg-gradient-to-r from-blue-900 to-secondary text-white py-20"
+        >
           <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-4">À Propos de Nous</h1>
-
-            <p className="text-xl mb-8 text-centerr">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-5xl font-bold mb-4"
+            >
+              À Propos de Nous
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-xl mb-8"
+            >
               Découvrez l&apos;équipe passionnée derrière vos succès en
               marketing digital
-            </p>
+            </motion.p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="about-content py-20">
+        <AnimatedSection className="about-content py-20">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
@@ -49,33 +92,61 @@ const APropos = () => {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section className="team py-20">
+        <AnimatedSection className="team py-20">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold mb-12">Notre Équipe</h2>
             <p className="text-xl mb-8">
               Une équipe passionnée d&apos;experts en marketing digital, dédiée
               à votre réussite.
             </p>
-            <img src="/propos.jpg" alt="Notre équipe" />
+            <motion.img
+              src="/propos.jpg"
+              alt="Notre équipe"
+              className="mx-auto rounded-lg shadow-xl"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            />
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section className="cta text-white py-20">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="cta bg-gradient-to-r from-secondary to-primary text-white py-20"
+        >
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-3xl font-bold mb-8"
+            >
               Prêt à travailler avec nous ?
-            </h2>
-            <p className="text-xl mb-8">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-xl mb-8"
+            >
               Découvrez comment notre expertise peut transformer votre présence
               en ligne.
-            </p>
-            <Link to="/contact">
-              <Superbtn>Contactez-nous maintenant</Superbtn>
-            </Link>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <Link to="/contact">
+                <Superbtn>Contactez-nous maintenant</Superbtn>
+              </Link>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
       </main>
       <Footer />
     </div>

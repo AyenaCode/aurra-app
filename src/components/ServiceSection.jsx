@@ -1,45 +1,90 @@
+import {
+  FaBullhorn,
+  FaCalendarAlt,
+  FaCamera,
+  FaCode,
+  FaComments,
+  FaDigitalOcean,
+  FaPalette,
+  FaPencilAlt,
+  FaSearch,
+} from "react-icons/fa";
 import { ServiceCard } from "./ServiceCard";
 
 export const ServiceSection = () => {
   const services = [
     {
-      title: "Stratégie marketing",
+      title: "Marketing Digital",
       description:
-        "Développez une stratégie marketing puissante et ciblée pour atteindre vos objectifs commerciaux.",
-      image: "/img6.jpg",
+        "Stratégies de marketing en ligne pour augmenter votre visibilité et vos conversions.",
+      Icon: FaDigitalOcean,
     },
     {
-      title: "Conception graphique",
+      title: "Communication",
       description:
-        "Créez une identité visuelle forte et mémorable qui capte l'attention de votre audience.",
-      image: "/img7.jpg",
+        "Élaboration de stratégies de communication globales pour améliorer votre image et votre message auprès de votre public cible.",
+      Icon: FaComments,
     },
     {
-      title: "Gestion des Médias Sociaux",
+      title: "Gestion des Réseaux Sociaux",
       description:
-        "Engagez votre audience et augmentez votre visibilité en ligne grâce à nos stratégies efficaces.",
-      image: "/img8.jpg",
+        "Gestion professionnelle de vos profils sur les réseaux sociaux pour engager votre audience.",
+      Icon: FaBullhorn,
     },
     {
-      title: "Création de contenu",
+      title: "Création de Contenu",
       description:
-        "Captivez vos fans et renforcez votre présence en ligne grâce à nos contenus innovants et percutants.",
-      image: "/img9.jpg",
+        "Création de contenu engageant et pertinent pour votre marque et votre audience.",
+      Icon: FaPencilAlt,
+    },
+    {
+      title: "Graphisme",
+      description:
+        "Conception graphique professionnelle pour renforcer votre identité visuelle et captiver votre audience.",
+      Icon: FaPalette,
+    },
+    {
+      title: "Développement Web",
+      description:
+        "Création de sites web modernes, responsives et optimisés pour les moteurs de recherche.",
+      Icon: FaCode,
+    },
+    {
+      title: "Production Audiovisuelle",
+      description:
+        "Création de contenu vidéo professionnel pour promouvoir votre marque et vos produits.",
+      Icon: FaCamera,
+    },
+    {
+      title: "Événementiel",
+      description:
+        "Organisation et gestion d'événements professionnels pour renforcer votre image de marque et créer des connexions.",
+      Icon: FaCalendarAlt,
+    },
+    {
+      title: "SEO",
+      description:
+        "Optimisation de votre présence en ligne pour les moteurs de recherche et augmenter votre visibilité.",
+      Icon: FaSearch,
     },
   ];
 
   return (
-    <section id="services" className="px-4 md:px-8 py-8">
-      <h2 className="text-center text-2xl font-bold mb-8">Nos services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            description={service.description}
-            image={service.image}
-          />
-        ))}
+    <section id="services" className="py-16 bg-base-200">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Notre spécialité
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              Icon={service.Icon}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

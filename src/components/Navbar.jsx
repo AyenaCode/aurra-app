@@ -2,39 +2,29 @@ import { Menu, X } from "lucide-react"; // Import des icônes Lucide
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { Span } from "../pages/Accueil";
 
 export const Navbar = () => {
   const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  // État pour gérer l'ouverture du menu
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Fonction pour basculer l'état du menu
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setIsOpen(false); // Ferme le menu quand la route change
+  }, [pathname]);
+
   const toggleMenu = (e) => {
     e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
-  // Fonction pour fermer le menu
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const closeMenu = () => setIsOpen(false);
 
-  // Effet pour ajouter et supprimer l'écouteur d'événements
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     const handleClickOutside = (e) => {
-      if (isOpen && !e.target.closest("nav")) {
-        closeMenu();
-      }
+      if (isOpen && !e.target.closest("nav")) closeMenu();
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -46,38 +36,31 @@ export const Navbar = () => {
     };
   }, [isOpen]);
 
-  // Fonction pour empêcher la propagation du clic sur le menu
-  const handleMenuClick = (e) => {
-    e.stopPropagation();
-  };
-
   const navLinkClass =
     "text-violet-500 hover:text-primary transition-colors duration-300";
   const activeNavLinkClass = "text-primary font-bold";
 
   return (
     <nav
-      onClick={handleMenuClick}
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? "bg-base-300 shadow-lg" : "bg-transparent"
-      } `}
+      }`}
     >
-      <div className="container mx-auto px-4 py-1 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-white">
-          AURRA COM
+      <div className="mx-auto px-10 py-1 flex justify-between items-center">
+        <Link to="/" className="text-xl font-bold" onClick={closeMenu}>
+          <Span>AURRA</Span>
         </Link>
         <button
-          className="md:hidden bg-transparent text-white"
+          className="md:hidden bg-transparent text-blueColor"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
         <ul
-          onClick={() => closeMenu()}
-          className={`nav-links md:flex space-x-6 font-semibold items-center transition-all duration-300 ${
+          className={`md:flex space-x-6 font-semibold items-center transition-all duration-300 ${
             isOpen
-              ? "absolute top-full text-center right-0 bg-base-200 shadow-lg p-4 space-y-4 md:space-y-0"
+              ? "absolute top-full right-0 bg-base-200 shadow-lg p-4 pl-10 space-y-4 md:space-y-0"
               : "hidden"
           } md:relative md:bg-transparent md:p-0 md:flex`}
         >
@@ -86,6 +69,7 @@ export const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeNavLinkClass : navLinkClass
             }
+            onClick={closeMenu}
             end
           >
             <li>Accueil</li>
@@ -95,10 +79,16 @@ export const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeNavLinkClass : navLinkClass
             }
+            onClick={closeMenu}
           >
             <li>Services</li>
           </NavLink>
-          <HashLink to="/#projects" smooth className={navLinkClass}>
+          <HashLink
+            to="/#projects"
+            smooth
+            className={navLinkClass}
+            onClick={closeMenu}
+          >
             <li>Nos Projets</li>
           </HashLink>
           <NavLink
@@ -106,6 +96,7 @@ export const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeNavLinkClass : navLinkClass
             }
+            onClick={closeMenu}
           >
             <li>À propos</li>
           </NavLink>
@@ -114,6 +105,7 @@ export const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeNavLinkClass : navLinkClass
             }
+            onClick={closeMenu}
           >
             <li>Blog</li>
           </NavLink>
@@ -122,13 +114,19 @@ export const Navbar = () => {
             className={({ isActive }) =>
               isActive ? activeNavLinkClass : navLinkClass
             }
+            onClick={closeMenu}
           >
             <li>Contact</li>
           </NavLink>
-          <HashLink to="/#faq" smooth className={navLinkClass}>
+          <HashLink
+            to="/#faq"
+            smooth
+            className={navLinkClass}
+            onClick={closeMenu}
+          >
             <li>FAQ</li>
           </HashLink>
-          <Link to="/contact" className="md:ml-4">
+          <Link to="/contact" className="md:ml-4" onClick={closeMenu}>
             <button className="btn btn-primary" aria-label="Obtenir un devis">
               Obtenir un devis
             </button>

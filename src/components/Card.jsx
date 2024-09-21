@@ -1,24 +1,36 @@
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-export const Card = ({ title, description, image = null }) => {
+export const Card = ({ title, description, image }) => {
   return (
-    <div className="bg-blue-950 shadow-lg text-gray-200 rounded-lg p-6 mb-6 transition-transform hover:scale-105">
-      {image && (
+    <motion.div
+      className="card bg-white rounded-lg shadow-md overflow-hidden"
+      whileHover={{
+        boxShadow:
+          "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        y: -5,
+      }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
+      <figure className="relative h-48 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover rounded-t-lg mb-4"
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
-      )}
-      <h4 className="text-xl font-bold mb-2">{title}</h4>
-      <p className="text-justify">{description}</p>
-    </div>
+      </figure>
+      <div className="card-body p-6">
+        <h3 className="card-title text-xl font-semibold text-gray-800 mb-2">
+          {title}
+        </h3>
+        <p className="text-gray-600 text-sm">{description}</p>
+      </div>
+    </motion.div>
   );
 };
 
-// Définitions des PropTypes
 Card.propTypes = {
-  title: PropTypes.string.isRequired, // Le titre est requis et doit être une chaîne
-  description: PropTypes.string.isRequired, // La description est requise et doit être une chaîne
-  image: PropTypes.string, // L'image est optionnelle et doit être une chaîne (URL)
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };

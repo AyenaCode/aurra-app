@@ -1,87 +1,22 @@
-/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import {
   FaBullhorn,
-  FaCalendarAlt,
   FaCamera,
   FaChartLine,
   FaCode,
   FaPalette,
   FaPencilAlt,
   FaRocket,
-  FaSearch,
+  FaUsers,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "../components/ServiceCard";
-import { Superbtn } from "../components/Superbtn";
 
 const Services = () => {
-  const services = [
-    {
-      title: "Stratégie Marketing Digital",
-      description:
-        "Élaborez une stratégie sur mesure pour dominer votre marché en ligne. Notre approche holistique intègre l'analyse de votre secteur, l'identification de votre audience cible, et la création d'un plan d'action détaillé. Nous utilisons des outils de pointe pour suivre les tendances du marché et ajuster votre stratégie en temps réel, garantissant ainsi une longueur d'avance sur vos concurrents.",
-      Icon: FaRocket,
-    },
-    {
-      title: "Optimisation SEO",
-      description:
-        "Propulsez votre site en tête des résultats de recherche grâce à notre expertise en SEO. Nous effectuons une analyse approfondie de vos mots-clés, optimisons votre contenu on-page, améliorons la structure technique de votre site, et développons une stratégie de backlinks de qualité. Notre approche SEO éthique et durable vous assure une visibilité à long terme et un flux constant de trafic qualifié.",
-      Icon: FaSearch,
-    },
-    {
-      title: "Marketing sur les Réseaux Sociaux",
-      description:
-        "Engagez votre audience et transformez vos followers en clients fidèles. Nous créons des stratégies de contenu personnalisées pour chaque plateforme, gérons vos campagnes publicitaires sociales, et interagissons activement avec votre communauté. Notre équipe utilise des outils d'analyse avancés pour mesurer l'engagement, ajuster les tactiques, et maximiser votre ROI sur les réseaux sociaux.",
-      Icon: FaBullhorn,
-    },
-    {
-      title: "Publicité en Ligne",
-      description:
-        "Maximisez votre retour sur investissement avec des campagnes publicitaires ciblées et optimisées. Nous concevons et gérons des campagnes sur Google Ads, Facebook Ads, LinkedIn Ads et plus encore. Notre approche data-driven nous permet d'affiner continuellement vos campagnes, en optimisant les enchères, les annonces et les pages de destination pour obtenir le meilleur coût par acquisition possible.",
-      Icon: FaChartLine,
-    },
-    {
-      title: "Création de Contenu",
-      description:
-        "Captivez votre audience avec du contenu percutant qui renforce votre autorité. Notre équipe de rédacteurs et de créatifs produit des articles de blog, des livres blancs, des infographies, et du contenu multimédia alignés sur vos objectifs marketing. Nous utilisons des techniques de storytelling avancées et des données SEO pour créer du contenu qui non seulement engage, mais aussi convertit.",
-      Icon: FaPencilAlt,
-    },
-    {
-      title: "Développement Web",
-      description:
-        "Créez une présence en ligne impressionnante avec des sites web modernes et performants. Nos développeurs utilisent les dernières technologies pour construire des sites rapides, sécurisés et optimisés pour les conversions. Que ce soit un site vitrine, une boutique e-commerce ou une application web complexe, nous concevons des solutions sur mesure qui reflètent votre marque et répondent aux besoins de vos utilisateurs.",
-      Icon: FaCode,
-    },
-    {
-      title: "Design Graphique",
-      description:
-        "Démarquez-vous avec une identité visuelle forte qui capte l'attention. Notre équipe de designers crée des logos, des chartes graphiques, des supports marketing et des interfaces utilisateur qui transmettent l'essence de votre marque. Nous utilisons les principes du design thinking pour créer des visuels non seulement esthétiques, mais aussi fonctionnels et alignés sur vos objectifs commerciaux.",
-      Icon: FaPalette,
-    },
-    {
-      title: "Production Audiovisuelle",
-      description:
-        "Racontez votre histoire de manière captivante avec des vidéos professionnelles. De la conceptualisation au montage final, notre équipe de production crée des vidéos promotionnelles, des publicités, des tutoriels et des contenus pour les réseaux sociaux qui inspirent et convertissent. Nous utilisons des équipements de pointe et des techniques narratives innovantes pour produire des vidéos qui se démarquent dans un paysage médiatique saturé.",
-      Icon: FaCamera,
-    },
-    {
-      title: "Événementiel",
-      description:
-        "Créez des expériences mémorables qui renforcent votre image de marque. Nous organisons et gérons des lancements de produits, des conférences, des webinaires et des événements de networking qui génèrent des opportunités d'affaires. Notre approche intègre des éléments digitaux innovants pour maximiser l'engagement et l'impact de vos événements, qu'ils soient physiques, virtuels ou hybrides.",
-      Icon: FaCalendarAlt,
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
   const itemVariants = {
@@ -89,123 +24,236 @@ const Services = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      },
+      transition: { type: "spring", stiffness: 100 },
     },
   };
 
+  const services = [
+    {
+      title: "Marketing Digital",
+      description:
+        "Boostez votre présence en ligne avec nos stratégies de marketing digital sur mesure. Nous utilisons les dernières technologies et tendances pour maximiser votre visibilité et vos conversions.",
+      Icon: FaRocket,
+      details: [
+        "Analyse approfondie de votre marché cible",
+        "Stratégies SEO/SEA optimisées",
+        "Campagnes de publicité ciblées",
+        "Optimisation des taux de conversion",
+        "Rapports détaillés et analyses de performance",
+      ],
+      price: 1500,
+    },
+    {
+      title: "Gestion des Réseaux Sociaux",
+      description:
+        "Engagez votre audience et construisez une communauté fidèle avec notre gestion experte des réseaux sociaux. Nous créons du contenu captivant et gérons vos interactions pour renforcer votre marque.",
+      Icon: FaBullhorn,
+      details: [
+        "Création de contenu personnalisé",
+        "Planification et programmation des posts",
+        "Gestion des commentaires et messages",
+        "Analyse des performances et ajustements",
+        "Stratégies d'engagement et de croissance",
+      ],
+      price: 1200,
+    },
+    {
+      title: "Développement Web",
+      description:
+        "Créez une présence en ligne impressionnante avec nos services de développement web. Nous concevons des sites web responsifs, rapides et optimisés pour les moteurs de recherche.",
+      Icon: FaCode,
+      details: [
+        "Design UX/UI personnalisé",
+        "Développement front-end et back-end",
+        "Optimisation des performances",
+        "Intégration de fonctionnalités avancées",
+        "Maintenance et support continu",
+      ],
+      price: 2500,
+    },
+    {
+      title: "Design Graphique",
+      description:
+        "Donnez vie à votre marque avec notre expertise en design graphique. Nous créons des visuels percutants qui captivent votre audience et renforcent votre identité visuelle.",
+      Icon: FaPalette,
+      details: [
+        "Création de logo et identité de marque",
+        "Design de supports marketing",
+        "Infographies et visualisations de données",
+        "Design d'interface utilisateur",
+        "Illustrations personnalisées",
+      ],
+      price: 1800,
+    },
+    {
+      title: "Création de Contenu",
+      description:
+        "Engagez votre audience avec du contenu de qualité. Notre équipe de rédacteurs experts crée du contenu persuasif et informatif qui positionne votre marque comme leader dans votre industrie.",
+      Icon: FaPencilAlt,
+      details: [
+        "Rédaction d'articles de blog",
+        "Création de livres blancs et e-books",
+        "Copywriting pour sites web et publicités",
+        "Scénarios pour vidéos marketing",
+        "Newsletters et emails marketing",
+      ],
+      price: 1300,
+    },
+    {
+      title: "Production Audiovisuelle",
+      description:
+        "Racontez l'histoire de votre marque de manière captivante avec nos services de production audiovisuelle. Nous créons des vidéos professionnelles qui inspirent et convertissent.",
+      Icon: FaCamera,
+      details: [
+        "Conception et storyboarding",
+        "Tournage professionnel",
+        "Montage et post-production",
+        "Animation et effets spéciaux",
+        "Optimisation pour les plateformes sociales",
+      ],
+      price: 3000,
+    },
+  ];
+
   return (
-    <>
-      <main className="bg-base-100">
+    <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+      <main>
         <motion.section
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="hero bg-gradient-to-r from-blue-950 to-secondary text-white py-20"
+          className="py-20 bg-gradient-to-r from-blue-950 to-violet-950 text-white"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
         >
-          <div className="container mx-auto text-center px-4">
+          <div className="container mx-auto px-4">
             <motion.h1
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-5xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold mb-6 text-center"
+              variants={itemVariants}
             >
-              Propulsez Votre Entreprise vers le Succès
+              Nos Services Sur Mesure
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-xl mb-8 max-w-3xl mx-auto"
+              className="text-xl mb-8 text-center max-w-3xl mx-auto"
+              variants={itemVariants}
             >
-              Découvrez nos solutions de communication et de marketing digital
-              sur mesure, conçues pour transformer votre vision en résultats
-              concrets et mesurables.
+              Propulsez votre entreprise vers de nouveaux sommets avec nos
+              solutions de marketing digital expertes et personnalisées.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              <Link to="/contact">
-                <Superbtn>Obtenez votre stratégie personnalisée</Superbtn>
+            <motion.div className="flex justify-center" variants={itemVariants}>
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
+              >
+                Obtenez votre stratégie personnalisée
               </Link>
             </motion.div>
           </div>
         </motion.section>
 
-        <section className="services py-16 bg-base-200">
+        <section className="py-24 bg-gray-100">
           <div className="container mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12"
-            >
-              Nos Services d'Excellence
-            </motion.h2>
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
+            <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+              Nos Services Détaillés
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map((service, index) => (
-                <motion.div key={index} variants={itemVariants}>
-                  <ServiceCard
-                    title={service.title}
-                    description={service.description}
-                    Icon={service.Icon}
-                  />
-                </motion.div>
+                <ServiceCard
+                  key={index}
+                  title={service.title}
+                  description={service.description}
+                  Icon={service.Icon}
+                  details={service.details}
+                  price={service.price}
+                />
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="cta bg-gradient-to-r from-secondary to-primary text-white py-20"
+          className="py-16 bg-white"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
         >
-          <div className="container mx-auto text-center px-4">
+          <div className="container mx-auto px-4">
             <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-4xl font-bold mb-8"
+              className="text-3xl font-bold mb-12 text-center text-gray-800"
+              variants={itemVariants}
             >
-              Prêt à Révolutionner Votre Présence en Ligne ?
+              Pourquoi choisir nos services ?
+            </motion.h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: FaRocket,
+                  title: "Expertise Pointue",
+                  description:
+                    "Notre équipe d'experts maîtrise les dernières tendances et technologies du marketing digital.",
+                },
+                {
+                  icon: FaChartLine,
+                  title: "Résultats Mesurables",
+                  description:
+                    "Nous nous engageons à fournir des résultats concrets et mesurables pour votre entreprise.",
+                },
+                {
+                  icon: FaUsers,
+                  title: "Approche Personnalisée",
+                  description:
+                    "Chaque stratégie est conçue sur mesure pour répondre à vos objectifs spécifiques.",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg shadow-lg text-center"
+                  variants={itemVariants}
+                >
+                  <item.icon className="text-5xl mb-4 text-blue-600 mx-auto" />
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        <motion.section
+          className="py-20 bg-blue-600 text-white"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+        >
+          <div className="container mx-auto px-4 text-center">
+            <motion.h2
+              className="text-3xl font-bold mb-6"
+              variants={itemVariants}
+            >
+              Prêt à transformer votre présence en ligne ?
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-xl mb-12 max-w-3xl mx-auto"
+              className="text-xl mb-8 max-w-2xl mx-auto"
+              variants={itemVariants}
             >
-              Ne laissez pas vos concurrents vous devancer. Contactez-nous dès
-              aujourd'hui pour une consultation gratuite et découvrez comment
-              nos services sur mesure peuvent propulser votre entreprise vers de
-              nouveaux sommets.
+              Ne laissez pas passer l&apos;opportunité de dominer votre marché.
+              Contactez-nous dès aujourd&apos;hui pour une consultation gratuite
+              et découvrez comment nos services peuvent propulser votre
+              entreprise vers le succès.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              <Link to="/contact">
-                <Superbtn>Lancez Votre Transformation Digitale</Superbtn>
+            <motion.div variants={itemVariants}>
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-100 transition duration-300"
+              >
+                Commencez votre transformation digitale
               </Link>
             </motion.div>
           </div>
         </motion.section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

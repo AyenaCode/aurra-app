@@ -52,7 +52,7 @@ export const ServiceCard = ({
             </div>
             <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
           </div>
-          <p className="text-gray-600 mb-6">{description}</p>
+
           <p className="text-3xl font-bold mb-6 text-primary">{price} €</p>
           <h3 className="text-xl font-semibold mb-4 text-gray-700">
             Détails du service :
@@ -84,8 +84,4 @@ ServiceCard.propTypes = {
   details: PropTypes.arrayOf(PropTypes.string).isRequired,
   price: PropTypes.number.isRequired,
   showPriceInitially: PropTypes.bool,
-};
-
-ServiceCard.defaultProps = {
-  showPriceInitially: false,
 };

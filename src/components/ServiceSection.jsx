@@ -6,7 +6,6 @@ import {
   FaComments,
   FaDigitalOcean,
   FaPalette,
-  FaPencilAlt,
   FaSearch,
 } from "react-icons/fa";
 import { ServiceCard } from "./ServiceCard";
@@ -25,7 +24,7 @@ export const ServiceSection = () => {
         "Analyse et optimisation des performances",
         "Marketing par e-mail et automation",
       ],
-      price: 1500,
+      price: 150,
     },
     {
       title: "Communication",
@@ -39,7 +38,7 @@ export const ServiceSection = () => {
         "Gestion des relations publiques",
         "Évaluation et ajustement de la stratégie",
       ],
-      price: 1200,
+      price: 120,
     },
     {
       title: "Gestion des Réseaux Sociaux",
@@ -53,21 +52,7 @@ export const ServiceSection = () => {
         "Gestion des interactions avec l'audience",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 1800,
-    },
-    {
-      title: "Création de Contenu",
-      description:
-        "Création de contenu engageant et pertinent pour votre marque et votre audience.",
-      Icon: FaPencilAlt,
-      details: [
-        "Analyse de la cible et de ses besoins",
-        "Développement d'une stratégie de contenu",
-        "Création de contenu de qualité",
-        "Optimisation pour les moteurs de recherche",
-        "Analyse et ajustement de la stratégie",
-      ],
-      price: 2000,
+      price: 180,
     },
     {
       title: "Graphisme",
@@ -81,7 +66,7 @@ export const ServiceSection = () => {
         "Gestion de la cohérence visuelle",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2200,
+      price: 220,
     },
     {
       title: "Développement Web",
@@ -95,7 +80,7 @@ export const ServiceSection = () => {
         "Optimisation pour les moteurs de recherche",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2500,
+      price: 250,
     },
     {
       title: "Production Audiovisuelle",
@@ -109,7 +94,7 @@ export const ServiceSection = () => {
         "Gestion de la production et de la post-production",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2800,
+      price: 280,
     },
     {
       title: "Événementiel",
@@ -123,7 +108,7 @@ export const ServiceSection = () => {
         "Gestion de l'organisation et de la logistique",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 3000,
+      price: 300,
     },
     {
       title: "SEO",
@@ -137,7 +122,7 @@ export const ServiceSection = () => {
         "Gestion des liens et de la réputation",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 3200,
+      price: 320,
     },
   ];
 

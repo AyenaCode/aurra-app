@@ -31,6 +31,6 @@ export const Card = ({ title, description, image }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
 };

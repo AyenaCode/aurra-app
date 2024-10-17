@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Span } from "../pages/Accueil";
+import { SocialMedia } from "./Footer";
 
 export const Navbar = () => {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ export const Navbar = () => {
         <Link to="/" className="text-xl font-bold" onClick={closeMenu}>
           <Span>AURRA</Span>
         </Link>
+        <SocialMedia className="space-x-8 md:space-x-4" />
         <button
           className="md:hidden bg-transparent text-blueColor"
           onClick={toggleMenu}
@@ -57,6 +59,7 @@ export const Navbar = () => {
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
+
         <ul
           className={`md:flex space-x-6 font-semibold items-center transition-all duration-300 ${
             isOpen
@@ -100,15 +103,7 @@ export const Navbar = () => {
           >
             <li>À propos</li>
           </NavLink>
-          <NavLink
-            to="/blog"
-            className={({ isActive }) =>
-              isActive ? activeNavLinkClass : navLinkClass
-            }
-            onClick={closeMenu}
-          >
-            <li>Blog</li>
-          </NavLink>
+
           <NavLink
             to="/contact"
             className={({ isActive }) =>
@@ -118,19 +113,10 @@ export const Navbar = () => {
           >
             <li>Contact</li>
           </NavLink>
-          <HashLink
-            to="/#faq"
-            smooth
-            className={navLinkClass}
-            onClick={closeMenu}
-          >
-            <li>FAQ</li>
-          </HashLink>
-          <Link to="/contact" className="md:ml-4" onClick={closeMenu}>
-            <button className="btn btn-primary" aria-label="Obtenir un devis">
-              Obtenir un devis
-            </button>
-          </Link>
+
+          {/* <li>
+            <SocialMedia />
+          </li> */}
         </ul>
       </div>
     </nav>

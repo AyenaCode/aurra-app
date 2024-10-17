@@ -1,34 +1,17 @@
 import {
   FaBullhorn,
-  FaCalendarAlt,
   FaCamera,
   FaCode,
   FaComments,
-  FaDigitalOcean,
   FaPalette,
   FaPencilAlt,
-  FaSearch,
 } from "react-icons/fa";
 import { ServiceCard } from "./ServiceCard";
 
 export const ServiceSection = () => {
-  const services = [
+  const Communication = [
     {
-      title: "Marketing Digital",
-      description:
-        "Stratégies de marketing en ligne pour augmenter votre visibilité et vos conversions.",
-      Icon: FaDigitalOcean,
-      details: [
-        "Analyse de marché et de la concurrence",
-        "Stratégie de contenu multicanal",
-        "Campagnes publicitaires ciblées",
-        "Analyse et optimisation des performances",
-        "Marketing par e-mail et automation",
-      ],
-      price: 1500,
-    },
-    {
-      title: "Communication",
+      title: "Stratégie de communication",
       description:
         "Élaboration de stratégies de communication globales pour améliorer votre image et votre message auprès de votre public cible.",
       Icon: FaComments,
@@ -39,7 +22,7 @@ export const ServiceSection = () => {
         "Gestion des relations publiques",
         "Évaluation et ajustement de la stratégie",
       ],
-      price: 1200,
+      price: 120,
     },
     {
       title: "Gestion des Réseaux Sociaux",
@@ -53,7 +36,7 @@ export const ServiceSection = () => {
         "Gestion des interactions avec l'audience",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 1800,
+      price: 180,
     },
     {
       title: "Création de Contenu",
@@ -67,7 +50,7 @@ export const ServiceSection = () => {
         "Optimisation pour les moteurs de recherche",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2000,
+      price: 200,
     },
     {
       title: "Graphisme",
@@ -81,21 +64,7 @@ export const ServiceSection = () => {
         "Gestion de la cohérence visuelle",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2200,
-    },
-    {
-      title: "Développement Web",
-      description:
-        "Création de sites web modernes, responsives et optimisés pour les moteurs de recherche.",
-      Icon: FaCode,
-      details: [
-        "Analyse des besoins et des objectifs",
-        "Développement d'une stratégie de développement",
-        "Création de sites web de qualité",
-        "Optimisation pour les moteurs de recherche",
-        "Analyse et ajustement de la stratégie",
-      ],
-      price: 2500,
+      price: 220,
     },
     {
       title: "Production Audiovisuelle",
@@ -109,49 +78,92 @@ export const ServiceSection = () => {
         "Gestion de la production et de la post-production",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 2800,
+      price: 280,
     },
     {
-      title: "Événementiel",
+      title: "Développement Web",
       description:
-        "Organisation et gestion d'événements professionnels pour renforcer votre image de marque et créer des connexions.",
-      Icon: FaCalendarAlt,
+        "Création de sites web modernes, responsives et optimisés pour les moteurs de recherche.",
+      Icon: FaCode,
       details: [
-        "Analyse de la cible et de ses besoins",
-        "Développement d'une stratégie d'événementiel",
-        "Création de contenu d'événementiel",
-        "Gestion de l'organisation et de la logistique",
+        "Analyse des besoins et des objectifs",
+        "Développement d'une stratégie de développement",
+        "Création de sites web de qualité",
+        "Optimisation pour les moteurs de recherche",
         "Analyse et ajustement de la stratégie",
       ],
-      price: 3000,
-    },
-    {
-      title: "SEO",
-      description:
-        "Optimisation de votre présence en ligne pour les moteurs de recherche et augmenter votre visibilité.",
-      Icon: FaSearch,
-      details: [
-        "Analyse de la présence actuelle en ligne",
-        "Développement d'une stratégie de SEO",
-        "Optimisation du contenu et de la structure",
-        "Gestion des liens et de la réputation",
-        "Analyse et ajustement de la stratégie",
-      ],
-      price: 3200,
+      price: 250,
     },
   ];
 
   return (
-    <section
-      id="services"
-      className="py-24 bg-gradient-to-r from-gray-50 to-gray-100"
-    >
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
-          Nos Services
+    <section className="flex fex-wrap">
+      <div
+        id="communication"
+        className="py-24 m-2 px-4 bg-gradient-to-r from-gray-300 to-violet-300 rounded shadow-lg w-1/3"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
+          communication
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {services.map((service, index) => (
+        <p className="my-3">
+          Nous croyons en l'importance d'une communication stratégique et
+          cohérente pour renforcer votre marque et atteindre vos objectifs
+          commerciaux. Voici nos services de communication :
+        </p>
+        <div className="">
+          {Communication.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              Icon={service.Icon}
+              details={service.details}
+              price={service.price}
+              showPriceInitially={false}
+            />
+          ))}
+        </div>
+      </div>
+      <div
+        id="communication"
+        className="py-24 m-2 px-4 bg-gradient-to-r from-gray-300 to-violet-300 rounded shadow-lg w-1/3"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
+          Événementiel
+        </h2>
+        <p className="my-3">
+          Nous croyons en l'importance d'une communication stratégique et
+          cohérente pour renforcer votre marque et atteindre vos objectifs
+          commerciaux. Voici nos services de communication :
+        </p>
+        <div className="">
+          {Communication.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              Icon={service.Icon}
+              details={service.details}
+              price={service.price}
+              showPriceInitially={false}
+            />
+          ))}
+        </div>
+      </div>
+      <div
+        id="communication"
+        className="py-24 m-2 px-4 bg-gradient-to-r from-gray-300 to-violet-300 rounded shadow-lg w-1/3"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800">
+          Service d'Emploi
+        </h2>
+        <p className="my-3">
+          Nous croyons en l'importance d'une communication stratégique et
+          cohérente pour renforcer votre marque et atteindre vos objectifs
+          commerciaux. Voici nos services de communication :
+        </p>
+        <div className="">
+          {Communication.map((service, index) => (
             <ServiceCard
               key={index}
               title={service.title}

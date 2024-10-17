@@ -17,7 +17,7 @@ export const ServiceCard = ({
   return (
     <>
       <motion.div
-        className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-2xl"
+        className="bg-white m-1 rounded-xl shadow-lg overflow-hidden transition-all duration-100 cursor-pointer"
         whileHover={{ y: -5 }}
         onClick={() => setIsModalOpen(true)}
       >

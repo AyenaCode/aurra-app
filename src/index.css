@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajoutez ces styles personnalisés */
+:root {
+  --color-primary: #4a90e2;
+  --color-primary-dark: #3a7bd5;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Ajoutez d'autres styles personnalisés si nécessaire */
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  margin: 5px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #ffff04;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+nav button:focus,
+button:focus-visible {
+  outline: none;
+  background-color: transparent;
+}
+
+.shadowText {
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.552);
+}
